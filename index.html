@@ -32,194 +32,172 @@
 
 		<div class="reveal">
 
-		<div class="slides">
+<div class="slides">
+    <section>
+        <h2>mobile authentication protocol</h2>
+        <h3>Wireless Group B:</h3>
+        <p>Tom Blount</p>
+        <p>Jose Cubero-Cascante<br>
+    </p>
+    <p>Thomas Grainger</p>
+    <p>Chris Orchard<br>
+</p>
+</section>
+<section>
+    <section>
+        <h2>Brief:</h2>
+<p>
+<br>
+</p>
+<blockquote>Design and demonstrate a simulation of the implementation of an efficient authentication protocol&nbsp; for mobile networks.</blockquote>
+
+</section>
+        <section>
+            <h2>GoalS</h2>
+            <p>
+            <br>
+        </p>
+        <ul>
+            <li>To implement an authentication protocol, using a single client, a single access point, and a single 
+server.</li>
+            <li>To investigate the use of an additional access point and the switching of the client between the two</li>
+            <li>To show the success of these goals using a practical demonstration<br>
+            </li>
+        </ul>
+</section>
+    </section>
     <section>
         <section>
-            <h1>How to run A</h1>
-<h1>Reason Week</h1>
-
-<p>Jessica Vautier - President, AHS&nbsp;<br>&amp; President, Soton Atheist Soc 2010/2011</p>
-<p>
-<br>Matthew Power, Treasurer AHS<br>President, Soton Atheist Soc</p>
-
+            <h2>802.1x</h2>
+            <ul>
+                <li> Port-based Network Access Control (PNAC)</li>
+                <li>
+                    <br>
+                </li>
+            </ul>
+            <p>
+            <br>
+        </p>
+    </section>
+    <section>
+        <h2>802.1x</h2>
+        <p>802.1X is made up of:<br>
+    </p>
+    <ul>
+        <li>Suplicant:&nbsp; an application running on the client<br>
+        </li>
+        <li>Authenticator: an application running on the access point that communicates with the client and server<br>
+        </li>
+        <li>Authentication 
+server: a remote server that holds authentication details (such as usernames and passwords). The <i>de facto</i> standard is to use RADIUS</li>
+    </ul>
 </section>
+<section>
+    <h2>EAP-TTLS</h2>
+    <ul>
+        <li>
+            <p>
+            <span>Extensible Authentication Protocol, </span>Tunneled Transport Layer Security</p>
+        </li>
+        <li>Is for blah blah<br>
+        </li>
+    </ul>
+    <h2>
+        <br>
+    </h2>
+</section>
+<section>
+    <h2>EAP-TTLS</h2>
+    <p>
+    <img src="http://www.interlinknetworks.com/app_notes/eap-peap_clip_image002.gif" height="366" width="722">
+</p>
+<h2>
+    <br>
+</h2>
+<h2>
+    <br>
+</h2>
+</section>
+<section>
+    <h2>EAP-TTLS</h2>
+</section>
+</section>
+<section>
+    <h2>Supplicant</h2>
+<p>
+<br>
+</p>
+<p>
+
+</p>
+</section>
+    <section>
+        <h2>Authenticatior</h2>
+<p>
+<br>
+</p>
+<p>
+
+</p>
+</section>
+        <section>
             <section>
-                <iframe src="http://atheistsoc.susu.org/reason-week-2012/" height="600" width="100%"></iframe>
+                <h2>RADIUS</h2>
+<p>
+<br>
+</p>
+<p>
+
+</p>
+</section>
+                <section>
+                    <h2>RADIUS</h2>
+                    <ul>
+                        <li>Remote Authentication Dial In User Service</li>
+                        <li>Provides Authentication, Authorization, and Accounting</li>
+                    </ul>
+                    <p>
+                    <br>
+                </p>
+            </section>
+            <section>
+                <h2>Config: Users</h2>
+<p>
+<br>
+</p>
+<p>
+</p>
+<pre>
+                <code>
+                    <br>#Give access to this user
+TomB    Cleartext-Password := "What a secure passphrase, eh?"<br>        Reply-Message = "Hello there %{User-Name}! How's it going?"<br>
+#Don't give access to this user<br>TomG    Auth-Type := Reject<br>        Reply-Message = "Oh no you don't Grainger. Not again."
+    </code>
+                </pre>
+
 
 </section>
                 <section>
-                    <iframe src="http://atheistsoc.susu.org/reason-week-2011/" height="600" width="100%">
-                    </iframe>
-
+                    <h2>Config: Clients</h2>
+<p>
+<br>
+</p>
+<pre>
+                    <code>
+                        <br>client linuxproj {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ipaddr = 152.78.71.57<br>        secret = testing123<br>        require_message_authenticator = no<br>
+                        <br>        #Used to specify a specific Network Access Server type<br>        #(e.g. cisco, multitech, etc.)<br>        nastype = other<br>}<br>
+</code>
+                    </pre>
+<p>
+<br>
+</p>
 </section>
-                    <section>
-                        <h2>Overview</h2>
-                        <ol>
-                            <li>Planning</li>
-                            <li>Funding</li>
-                            <li>Speakers</li>
-                            <li>Other Event Ideas</li>
-                            <li>Advertising</li>
-                        </ol>
-                    </section>
                 </section>
                 <section>
-                    <h2>Planning</h2>
-<ul>
-    <li>Plan early (no really!)</li>
-    <li>Spreadsheet<ul>
-    <li>
-<a href="https://drive.google.com/">
-        Google <del>Docs</del> Drive</a>  is great
-    </li>
-<li>
-    Assign tasks, allow for delays
-</li>
-<li>Collaboration</li>
-<li>Feed your minutes into the doc</li>
-                </ul>
-</li>
-            </ul>
+                    <h2>802.11r</h2>
+                </section>
+            </div>
 
-
-<p>
-<br>
-</p>
-<p>
-<br>
-</p>
-<p>
-From experience - check for clashes&nbsp;</p>
-<p>with other socs. awareness weeks!</p>
-
-</section>
-            <section>
-                <section>
-                    <h2>Funding</h2>
-<p>
-</p>
-<ul>
-    <li>Don't let funding worries constrain your ideas<ul>
-            <li>AHS Grants - 4 times a year</li>
-<li>Other organisations eg. NUS grants</li>
-<li>donors, local businesses</li>
-        </ul>
-    </li>
-    <li>
-        Speaker expenses<ul>
-<li>train times</li>
-<li>fares</li>
-        </ul>
-</li>
-<li>Get a gift as thanks (wine,&nbsp;pineapples,&nbsp;etc...)</li>
-                    <li>Room hire</li>
-</ul>
-<p>
-</p>
-
-
-</section>
-                    <section>
-                        <h2>Funding</h2>
-<p>
-</p>
-<ul>
-    <li>Ticketing<ul>
-        <li>be realistic in event attendance</li>
-<li>calculate how much you can make</li>
-<li>discounts to members?</li>
-<li>Facebook events</li>
-<li>can always use a donation bucket</li>
-                    </ul>
-                </li>
-                <li>Posters and advertising, later!</li>
-</ul>
-</section>
-            </section>
-            <section>
-                <h2>Speakers</h2>
-                <p>
-                <ul>
-                    <li>AHS Directory</li>
-                    <li>SitP Speakers</li>
-                    <li>BHA Local Groups</li>
-                    <li>range of topics</li>
-                    <li>theme</li>
-                </ul>
-            </p>
-</section>
-            <section>
-                <h2>Other event ideas</h2>
-<p>Audience Participation time!</p>
-<a class="twitter-timeline" data-dnt=true href="https://twitter.com/search?q=%23AHSSouth" data-widget-id="274712046514356224">Tweets about "#AHSSouth"</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
-
-</section>
-                <section>
-                    <section>
-                        <h2>ADVERTISING</h2>
-<p>
-</p>
-<ul>
-    <li>Posters<ul>
-        <li>generally expensive and a waste of time</li>
-<li>B&amp;W, simple, A4, no frills</li>
-</ul>
-    </li>
-    <li>Leaflets<ul>
-        <li>Again, simple</li>
-<li>keep them cheap</li>
-</ul>
-</li>
-                        <li>Try to find cheap(er) printing on campus</li>
-
-    
-</ul>
-<p>
-</p>
-
-
-</section>
-                        <section>
-                            <h2>ADvertising</h2>
-                            <p>
-                            <ul>
-                                <li>
-                                    <i>Facebook is crucial!</i>
-                                    <br>
-                                </li>
-                                <li>early and often</li>
-                                <li>don't be afraid to remind people</li>
-                                <li>students are lazy, when lazy, go to Facebook</li>
-                                <li>mailing list</li>
-                                <li>twitter</li>
-                                <li>website</li>
-                            </ul>
-                        </p>
-                    </section>
-                    <section>
-                        <h2>Advertising</h2>
-<div>
-    <ul>
-        <li>Other societies:<ul>
-        <li>LGBT</li>
-                        <li>feminist</li>
-                        <li>political</li>
-                        <li>debating</li>
-                        <li>philosophy</li>
-                    </ul>
-                </li>
-        <li>Student newspapers</li>
-        <li>Interfaith forums</li>
-        <li>SitP</li>
-        <li>Local Humanists and Secularists</li>
-    </ul>
-</div>
-</section>
-            </section>
-        </div>
 
 
 		<!--END-->
