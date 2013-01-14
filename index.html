@@ -38,160 +38,160 @@
         <h3>Wireless Group B:</h3>
         <p>Tom Blount</p>
         <p>Jose Cubero-Cascante<br>
-    </p>
-    <p>Thomas Grainger</p>
-    <p>Chris Orchard<br>
-</p>
-</section>
-<section>
+        </p>
+        <p>Thomas Grainger</p>
+        <p>Chris Orchard<br>
+        </p>
+    </section>
     <section>
-        <h2>Brief:</h2>
-<p>
-<br>
-</p>
-<blockquote>Design and demonstrate a simulation of the implementation of an efficient authentication protocol&nbsp; for mobile networks.</blockquote>
+        <section>
+            <h2>Brief:</h2>
+            <p>
+                <br>
+            </p>
+            <blockquote>Design and demonstrate a simulation of the implementation of an efficient authentication protocol&nbsp; for mobile networks.</blockquote>
 
-</section>
+        </section>
         <section>
             <h2>GoalS</h2>
             <p>
-            <br>
-        </p>
-        <ul>
-            <li>To implement an authentication protocol, using a single client, a single access point, and a single 
-server.</li>
-            <li>To investigate the use of an additional access point and the switching of the client between the two</li>
-            <li>To show the success of these goals using a practical demonstration<br>
-            </li>
-        </ul>
-</section>
-    </section>
-    <section>
-        <section>
-            <h2>802.1x</h2>
+                <br>
+            </p>
             <ul>
-                <li> Port-based Network Access Control (PNAC)</li>
-                <li>
-                    <br>
-                </li>
-            </ul>
-            <p>
-            <br>
-        </p>
-    </section>
-    <section>
-        <h2>802.1x</h2>
-        <p>802.1X is made up of:<br>
-    </p>
-    <ul>
-        <li>Suplicant:&nbsp; an application running on the client<br>
-        </li>
-        <li>Authenticator: an application running on the access point that communicates with the client and server<br>
-        </li>
-        <li>Authentication 
-server: a remote server that holds authentication details (such as usernames and passwords). The <i>de facto</i> standard is to use RADIUS</li>
-    </ul>
-</section>
-<section>
-    <h2>EAP-TTLS</h2>
-    <ul>
-        <li>
-            <p>
-            <span>Extensible Authentication Protocol, </span>Tunneled Transport Layer Security</p>
-        </li>
-        <li>Is for blah blah<br>
-        </li>
-    </ul>
-    <h2>
-        <br>
-    </h2>
-</section>
-<section>
-    <h2>EAP-TTLS</h2>
-    <p>
-    <img src="http://www.interlinknetworks.com/app_notes/eap-peap_clip_image002.gif" height="366" width="722">
-</p>
-<h2>
-    <br>
-</h2>
-<h2>
-    <br>
-</h2>
-</section>
-<section>
-    <h2>EAP-TTLS</h2>
-</section>
-</section>
-<section>
-    <h2>Supplicant</h2>
-<p>
-<br>
-</p>
-<p>
-<img src="http://i.imgur.com/eMcOq.png" alt="" height="170" width="822">
-</p>
-</section>
-    <section>
-        <h2>Authenticatior</h2>
-<p>
-<br>
-</p>
-<p>
-<img src="http://i.imgur.com/BNiVz.png" alt="" height="163" width="821">
-</p>
-</section>
+                <li>To implement an authentication protocol, using a single client, a single access point, and a single 
+                    server.</li>
+                    <li>To investigate the use of an additional access point and the switching of the client between the two</li>
+                    <li>To show the success of these goals using a practical demonstration<br>
+                    </li>
+                </ul>
+            </section>
+        </section>
         <section>
             <section>
-                <h2>RADIUS</h2>
-<p>
-<br>
-</p>
-<p>
-<img src="http://i.imgur.com/eMcOq.png" alt="" height="163" width="821">
-</p>
-</section>
-                <section>
-                    <h2>RADIUS</h2>
-                    <ul>
-                        <li>Remote Authentication Dial In User Service</li>
-                        <li>Provides Authentication, Authorization, and Accounting</li>
-                    </ul>
-                    <p>
+                <h2>802.1x</h2>
+                <ul>
+                    <li> Port-based Network Access Control (PNAC)</li>
+                    <li>
+                        <br>
+                    </li>
+                </ul>
+                <p>
                     <br>
                 </p>
             </section>
             <section>
-                <h2>Config: Users</h2>
-<p>
-<br>
-</p>
-<p>
-</p>
-<pre>
-                <code>
-                    <br>#Give access to this user
-TomB    Cleartext-Password := "What a secure passphrase, eh?"<br>        Reply-Message = "Hello there %{User-Name}! How's it going?"<br>
-#Don't give access to this user<br>TomG    Auth-Type := Reject<br>        Reply-Message = "Oh no you don't Grainger. Not again."
-    </code>
-                </pre>
-
-
-</section>
+                <h2>802.1x</h2>
+                <p>802.1X is made up of:<br>
+                </p>
+                <ul>
+                    <li>Suplicant:&nbsp; an application running on the client<br>
+                    </li>
+                    <li>Authenticator: an application running on the access point that communicates with the client and server<br>
+                    </li>
+                    <li>Authentication 
+                        server: a remote server that holds authentication details (such as usernames and passwords). The <i>de facto</i> standard is to use RADIUS</li>
+                    </ul>
+                </section>
                 <section>
-                    <h2>Config: Clients</h2>
-<p>
-<br>
-</p>
-<pre>
-                    <code>
-                        <br>client linuxproj {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ipaddr = 152.78.71.57<br>        secret = testing123<br>        require_message_authenticator = no<br>
-                        <br>        #Used to specify a specific Network Access Server type<br>        #(e.g. cisco, multitech, etc.)<br>        nastype = other<br>}<br>
-</code>
-                    </pre>
-<p>
-<br>
-</p>
-</section>
+                    <h2>EAP-TTLS</h2>
+                    <ul>
+                        <li>
+                            <p>
+                                <span>Extensible Authentication Protocol, </span>Tunneled Transport Layer Security</p>
+                            </li>
+                            <li>Is for blah blah<br>
+                            </li>
+                        </ul>
+                        <h2>
+                            <br>
+                        </h2>
+                    </section>
+                    <section>
+                        <h2>EAP-TTLS</h2>
+                        <p>
+                            <img src="http://www.interlinknetworks.com/app_notes/eap-peap_clip_image002.gif" height="366" width="722">
+                        </p>
+                        <h2>
+                            <br>
+                        </h2>
+                        <h2>
+                            <br>
+                        </h2>
+                    </section>
+                    <section>
+                        <h2>EAP-TTLS</h2>
+                    </section>
+                </section>
+                <section>
+                    <h2>Supplicant</h2>
+                    <p>
+                        <br>
+                    </p>
+                    <p>
+                        <img src="http://i.imgur.com/eMcOq.png" alt="" height="170" width="822">
+                    </p>
+                </section>
+                <section>
+                    <h2>Authenticatior</h2>
+                    <p>
+                        <br>
+                    </p>
+                    <p>
+                        <img src="http://i.imgur.com/BNiVz.png" alt="" height="163" width="821">
+                    </p>
+                </section>
+                <section>
+                    <section>
+                        <h2>RADIUS</h2>
+                        <p>
+                            <br>
+                        </p>
+                        <p>
+                            <img src="http://i.imgur.com/eMcOq.png" alt="" height="163" width="821">
+                        </p>
+                    </section>
+                    <section>
+                        <h2>RADIUS</h2>
+                        <ul>
+                            <li>Remote Authentication Dial In User Service</li>
+                            <li>Provides Authentication, Authorization, and Accounting</li>
+                        </ul>
+                        <p>
+                            <br>
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Config: Users</h2>
+                        <p>
+                            <br>
+                        </p>
+                        <p>
+                        </p>
+                        <pre>
+                            <code>
+                                <br>#Give access to this user
+                                TomB    Cleartext-Password := "What a secure passphrase, eh?"<br>        Reply-Message = "Hello there %{User-Name}! How's it going?"<br>
+                                #Don't give access to this user<br>TomG    Auth-Type := Reject<br>        Reply-Message = "Oh no you don't Grainger. Not again."
+                            </code>
+                        </pre>
+
+
+                    </section>
+                    <section>
+                        <h2>Config: Clients</h2>
+                        <p>
+                            <br>
+                        </p>
+                        <pre>
+                            <code>
+                                <br>client linuxproj {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ipaddr = 152.78.71.57<br>        secret = testing123<br>        require_message_authenticator = no<br>
+                                <br>        #Used to specify a specific Network Access Server type<br>        #(e.g. cisco, multitech, etc.)<br>        nastype = other<br>}<br>
+                            </code>
+                        </pre>
+                        <p>
+                            <br>
+                        </p>
+                    </section>
                 </section>
                 <section>
                     <h2>802.11r</h2>
